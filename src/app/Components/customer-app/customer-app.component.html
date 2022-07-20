@@ -1,0 +1,20 @@
+<input type="button"  value="Click to get PopUp" (click)="display()"/><br>
+Customer Code <input type="text" placeholder="142M1D4" [(ngModel)]="CustomerModel.CustomerCode"/><br>
+Customer Name <input type="text" placeholder="xyz" [(ngModel)]="CustomerModel.CustomerName"/><br>
+Customer Amount <input type="text" placeholder="10000" [(ngModel)]="CustomerModel.CustomerAmount"/><br>
+<input type="button" value="Add" (click)="add()"><br>
+{{CustomerModel.CustomerCode}}<br>
+{{CustomerModel.CustomerName}}<br>
+{{CustomerModel.CustomerAmount}}<br>
+<table>
+    <tr>
+        <td>Customer Code</td>
+        <td>Customer Name</td>
+        <td>Customer Amount</td>
+    </tr>
+    <tr *ngFor="let cust of CustomerModels">
+        <td>{{cust.CustomerCode}}</td>
+        <td>{{cust.CustomerName}}</td>
+        <td>{{cust.CustomerAmount}}</td>
+    </tr>
+</table>
